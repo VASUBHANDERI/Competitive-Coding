@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.lang.Math;
+public class Big{
+     public static void main(String args[])throws Exception{
+          Scanner sc = new Scanner(System.in);
+         int lw = sc.nextInt();
+         int bw = sc.nextInt();
+       for(double y=0;y<7;y++){
+            double lm = 3;
+              double ulw =(Math.pow(lm,y))*lw;
+            double bm = 2;
+              double ubw = (Math.pow(bm,y))*bw;
+              if (ulw>ubw){
+                   System.out.print((int)y);
+                   break;
+              }
+         }
+     }
+}

@@ -1,0 +1,90 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+import java.io.*;
+public class Sollution {
+	 static class FastReader {
+	        BufferedReader br;
+	        StringTokenizer st;
+	 
+	        public FastReader()
+	        {
+	            br = new BufferedReader(
+	                new InputStreamReader(System.in));
+	        }
+	 
+	        String next()
+	        {
+	            while (st == null || !st.hasMoreElements()) {
+	                try {
+	                    st = new StringTokenizer(br.readLine());
+	                }
+	                catch (IOException e) {
+	                    e.printStackTrace();
+	                }
+	            }
+	            return st.nextToken();
+	        }
+	 
+	        int nextInt() { return Integer.parseInt(next()); }
+	 
+	        long nextLong() { return Long.parseLong(next()); }
+	 
+	        double nextDouble()
+	        {
+	            return Double.parseDouble(next());
+	        }
+	 
+	        String nextLine()
+	        {
+	            String str = "";
+	            try {
+	                str = br.readLine();
+	            }
+	            catch (IOException e) {
+	                e.printStackTrace();
+	            }
+	            return str;
+	        }
+	    }
+	     public static void main(String args[])throws Exception{
+	        FastReader sc = new FastReader();
+	        BufferedWriter output = new BufferedWriter(
+	                new OutputStreamWriter(System.out));
+	          int t = sc.nextInt();
+	          for(int o=0;o<t;o++){
+	          int n = sc.nextInt();
+	          int[]ar = new int[n];
+	          int one = 0;
+	          int two = 0;
+              int c = 0;	   
+ 	          for(int i = 0;i<n;i++){
+	               ar[i]=sc.nextInt();
+	               if(ar[i]==1){
+	                    one++;
+	               }else if(ar[i]==2){
+	                    two++;
+	               }
+	          }
+ 	          for(int i = 0;i<=one;i++){
+ 	        	  int c1 = 0;
+	               for(int j =0;j<=two;j++){
+	               if(((one-i)*(1))+((j)*(2))==((i)*(1))+((two-j)*(2))){
+	                   output.write("YES"+"\n");
+	                    break;
+	               }else {
+	            	   c1++;
+	            	   c++;
+	               }
+	          }if(c1!=two+1) {
+	        	  break;
+	          }
+	          }
+ 	          if(c==(one+1)*(two+1)){
+	               output.write("NO"+"\n");        
+	               }
+	     }output.flush();
+	}
+}

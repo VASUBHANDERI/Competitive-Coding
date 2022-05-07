@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class RequiredRemainder{
+     public static void main(String args[])throws Exception{
+          Scanner sc = new Scanner(System.in);
+          int t = sc.nextInt();
+          for(int k =0 ;k<t;k++){
+               int x = sc.nextInt();
+               int y = sc.nextInt();
+               int n = sc.nextInt();
+               int d = n%x;
+               if(y<=d){
+                    System.out.println(n-d+y);
+               }else{
+                    System.out.println(n-d-x+y);
+               }
+          }
+}
+}

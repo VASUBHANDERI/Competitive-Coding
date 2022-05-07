@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class MinimalSquare{
+     public static void main(String args[])throws Exception{
+          Scanner sc = new Scanner(System.in);
+          int t = sc.nextInt();
+          for(int k =0 ;k<t;k++){
+               int a=sc.nextInt();
+               int b=sc.nextInt();
+               int max=Math.max(a,b);
+               int min=Math.min(a,b);
+               if(2*min>=max){
+                    System.out.println(4*min*min);
+               }else{
+                    System.out.println(max*max);
+               }
+     }
+}
+}

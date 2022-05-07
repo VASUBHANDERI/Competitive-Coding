@@ -1,0 +1,17 @@
+import java.util.*;
+public class PolycarpandCoins{
+     public static void main(String args[])throws Exception{
+          Scanner sc = new Scanner(System.in);
+          int t = sc.nextInt();
+          for(int o=0;o<t;o++){
+          long n =sc.nextLong();
+          if(n%3==0){
+               System.out.println((n/3)+" "+ (n/3));
+          }else if(n%3==1){
+               System.out.println(((n/3)+1)+" "+ (n/3));
+          }else if(n%3==2){
+               System.out.println((n/3)+" "+ ((n/3)+1));
+          }
+     }
+}
+}

@@ -1,0 +1,76 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.Math;
+import java.util.*;
+import java.io.*;
+import java.util.*;
+import java.util.StringTokenizer;
+
+public class Main {
+	static class FastReader {
+		BufferedReader br;
+		StringTokenizer st;
+
+		public FastReader() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+
+		String next() {
+			while (st == null || !st.hasMoreElements()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			return st.nextToken();
+		}
+
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
+
+		long nextLong() {
+			return Long.parseLong(next());
+		}
+
+		double nextDouble() {
+			return Double.parseDouble(next());
+		}
+
+		String nextLine() {
+			String str = "";
+			try {
+				str = br.readLine();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return str;
+		}
+	}
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		FastReader sc = new FastReader();
+		BufferedWriter ou = new BufferedWriter(new OutputStreamWriter(System.out));
+		// Start coding
+		int t = sc.nextInt();
+		for (int o = 0; o < t; o++) {
+	         String st = sc.nextLine();
+	         char f=st.charAt(0);
+	         char s=st.charAt(1);
+	         char a='a';
+	         int x=(int)f-(int)a+1;
+	         int y=(int)s-(int)a+1;
+	         if(x<y) {
+	         ou.write((x-1)*(25)+y-1 +"\n");
+	         }
+	         else {
+	        	 ou.write((x-1)*(25)+y +"\n");	 
+	         }
+		}
+		ou.flush();
+	}
+}
+

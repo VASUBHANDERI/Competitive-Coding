@@ -1,0 +1,86 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.Math;
+import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+import java.util.StringTokenizer;
+
+public class Sollution1 {
+	static class FastReader {
+		BufferedReader br;
+		StringTokenizer st;
+
+		public FastReader() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+
+		String next() {
+			while (st == null || !st.hasMoreElements()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			return st.nextToken();
+		}
+
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
+
+		long nextLong() {
+			return Long.parseLong(next());
+		}
+
+		double nextDouble() {
+			return Double.parseDouble(next());
+		}
+
+		String nextLine() {
+			String str = "";
+			try {
+				str = br.readLine();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return str;
+		}
+	}
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		FastReader sc = new FastReader();
+		BufferedWriter ou = new BufferedWriter(new OutputStreamWriter(System.out));
+		// Start coding
+		int n = sc.nextInt();
+		//sc.nextLine();
+		int raw = 0;
+		int toseat=0;
+		String[]sar = new String[n];
+		for (int i = 0; i<n ; i++) {
+			sar[i] = sc.nextLine();
+			if(sar[i].contains("OO")) {
+				toseat=i;
+			}else {
+				raw++;
+			}
+		}
+		if(raw!=n) {
+			ou.write("YES" +"\n");
+			if(!sar[toseat].contains("OO|OO")) {
+			sar[toseat]=sar[toseat].replace("OO","++");
+			}else {
+				sar[toseat]="++|OO";
+			}
+			for(int i = 0;i<n;i++) {
+				ou.write(sar[i] +"\n");
+			}
+		}else {
+			ou.write("NO" +"\n");
+		}
+		ou.flush();
+	}
+}

@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class  MishkaandGame{
+     public static void main(String args[])throws Exception{
+          Scanner sc = new Scanner(System.in);
+          int n = sc.nextInt();
+          int mw=0;
+           int cw=0;
+          for(int k =0 ;k<n;k++){
+               int m=sc.nextInt();
+               int c=sc.nextInt();
+               if(m>c){
+                    mw++;
+               }if(c>m){
+                    cw++;
+               }
+     }if(mw>cw){
+          System.out.print("Mishka");
+     }else if(cw>mw){
+          System.out.print("Chris");
+     }else{
+          System.out.print( "Friendship is magic!^^");
+     }
+}
+}

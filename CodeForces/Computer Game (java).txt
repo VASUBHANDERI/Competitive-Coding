@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class ComputerGame{
+     public static void main(String args[])throws Exception{
+          Scanner sc = new Scanner(System.in);
+          int t = sc.nextInt();
+          for(int k =0;k<t;k++){
+               int n = sc.nextInt();
+               sc.nextLine();
+               int c=0;
+               String s1 = sc.nextLine();
+               String s2 = sc.nextLine();
+               for(int i =0;i<n;i++){
+                    if(s1.charAt(i)=='1' && s2.charAt(i)=='1'){
+                        System.out.println("NO");
+                        break;
+                    }else{
+                         c++;
+                    }
+               }if(c==n){
+                    System.out.println("YES");
+               }
+     }
+}
+}

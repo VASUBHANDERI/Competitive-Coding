@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class GiftsFixing{
+     public static void main(String args[])throws Exception{
+          Scanner sc = new Scanner(System.in);
+          int t = sc.nextInt();
+          for(int k =0 ;k<t;k++){
+               int n =sc.nextInt();
+                int[][]gr=new int[2][n];
+                for(int i =0;i<2;i++){
+                     for(int j=0;j<n;j++){
+                          gr[i][j]=sc.nextInt();
+                     }
+                }int min0 =gr[0][0];
+                int min1 =gr[1][0];
+                for(int i=0;i<n;i++){
+                     if(gr[0][i]<min0){
+                          min0=gr[0][i];
+                     }
+                }for(int i=0;i<n;i++){
+                     if(gr[1][i]<min1){
+                          min1=gr[1][i];
+                     }
+                }int sum =0;
+                long c=0;
+                for(int j =1;j>0;j++){
+                     for(int i =0;i<n;i++){
+                          if(gr[0][i]>min0 && gr[1][i]>min1){
+                               int d = Math.min((gr[0][i]-min0),(gr[1][i]-min1));
+                               gr[0][i]-=d;
+                               gr[1][i]-=d;
+                               c+=d;
+                          }else if(gr[0][i]>min0 && gr[1][i]==min1){
+                               int d = gr[0][i]-min0;
+                               gr[0][i]-=d;
+                               c+=d;
+                          }else if(gr[0][i]==min0 && gr[1][i]>min1){
+                               int d = gr[1][i]-min1;
+                               gr[1][i]-=d;
+                               c+=d;
+                          }
+                     }for(int i =0;i<n;i++){
+                          sum = sum + gr[0][i]+gr[1][i];
+                     }if(sum!=n*(min0+min1)){
+                          sum=0;
+                     }else{
+                          break;
+                     }
+                }System.out.println(c);
+     }
+}
+}

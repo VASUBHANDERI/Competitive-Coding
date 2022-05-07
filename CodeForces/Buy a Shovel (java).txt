@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class BuyaShovel{
+     public static void main(String args[])throws Exception{
+          Scanner sc = new Scanner(System.in);
+          int k = sc.nextInt();
+          int r = sc.nextInt();
+          int n = 1;
+          while((k*n)%10!=r && (k*n)%10!=0){
+               n++;
+          }System.out.print(n);
+}
+}

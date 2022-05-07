@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class  YetAnotherTwoIntegersProblem{
+     public static void main(String args[])throws Exception{
+          Scanner sc = new Scanner(System.in);
+          int t = sc.nextInt();
+         for(int j=0;j<t;j++){
+              int a =sc.nextInt();
+              int b= sc.nextInt();
+              int m =0;
+              int d = Math.abs(a-b);
+              while(d!=0){
+                   for(int i = 10;i>0;i--){
+                   
+                        if(d%i<d){
+                             m=m+(d/i);
+                            d=d%i;
+                        }
+                   
+                   }
+              }System.out.println(m);
+              }
+         }
+}

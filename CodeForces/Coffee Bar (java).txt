@@ -1,0 +1,10 @@
+import java.util.Scanner;
+public class  CoffeeBar{
+     public static void main(String args[])throws Exception{
+          Scanner sc = new Scanner(System.in);
+          int t = sc.nextInt();
+          sc.nextLine();
+          String s = sc.nextLine();
+             System.out.print(s);
+ }
+}

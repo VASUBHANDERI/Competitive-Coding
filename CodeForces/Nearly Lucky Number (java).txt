@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class NearlyLuckyNumber{
+     public static void main(String args[])throws Exception{
+          Scanner sc = new Scanner(System.in);
+           String s = sc.nextLine();
+           int n = s.length();
+           int count = 0;
+           for(int i=0;i<n;i++){
+                if(s.charAt(i)=='4'||s.charAt(i)=='7'){
+                     count++;
+                }
+           }String result = Integer.toString(count);
+           if(result.contains("0")||result.contains("1")||result.contains("2")||result.contains("3")||result.contains("5")||result.contains("6")||result.contains("8")||result.contains("9")){
+                System.out.println("NO");
+           }else{
+                System.out.println("YES");
+           }
+     }
+}

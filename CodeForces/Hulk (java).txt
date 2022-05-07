@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Hulk{
+     public static void main(String args[])throws Exception{
+          Scanner sc = new Scanner(System.in);
+         int n = sc.nextInt();
+         String hate = "I hate ";
+         String feeling = "I hate ";
+         String love = "I love ";
+         String that = "that ";
+         String it = "it";
+         if(n>1){
+         for(int i = 2;i<=n;i++){
+              if(i%2==0){
+                   feeling = feeling + that + love;
+              }else{
+                   feeling =  feeling + that + hate;
+              }
+         }if (n%2==0){
+              feeling = feeling + it;
+         }else{
+              feeling = feeling  + it;
+         }
+         }else{
+              feeling = feeling + it;
+         }System.out.println(feeling);
+     }
+}

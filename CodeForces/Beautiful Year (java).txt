@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class BeautifulYear{
+     public static void main(String args[])throws Exception{
+          Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+      
+         for(int t = n+1;t<20000;t++){
+              String ns = Integer.toString(t);
+               if(ns.charAt(0)!=ns.charAt(1) && ns.charAt(0)!=ns.charAt(2) && ns.charAt(0)!=ns.charAt(3) && ns.charAt(1)!=ns.charAt(2) && ns.charAt(1)!=ns.charAt(3) && ns.charAt(2)!=ns.charAt(3)){
+                    System.out.println(t);
+                    break;
+               }
+              
+         }
+     }
+}

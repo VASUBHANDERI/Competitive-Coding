@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Elephant{
+     public static void main(String args[])throws Exception{
+          Scanner sc = new Scanner(System.in);
+          int n = sc.nextInt();
+          int count = 0;
+          int r = n%5;
+          if (r==0){
+               count = count + n/5;
+          }else if (r!=0){
+               count =count + (((n-r)/5)+1);
+          }System.out.println(count);
+               }
+          }
+     
