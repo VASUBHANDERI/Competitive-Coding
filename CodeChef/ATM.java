@@ -10,8 +10,7 @@ import java.util.StringTokenizer;
 //import java.math.BigDecimal;
 //import java.math.RoundingMode;
 
-
-public class Main {
+public class ATM {
 	static class FastReader {
 		BufferedReader br;
 		StringTokenizer st;
@@ -59,17 +58,17 @@ public class Main {
 		FastReader sc = new FastReader();
 		BufferedWriter ou = new BufferedWriter(new OutputStreamWriter(System.out));
 		// Start coding
-	    int x = sc.nextInt();
-	    double wa = 0;
-	    if(x%5==0) {
-	    	wa = x/1.00 + 0.50;
-	    }
-	    double print = sc.nextDouble()-wa;
-	    if (print>=0) {
-	    ou.write(String.format("%.2f",print) +"\n");
-	    } else {
-	    	ou.write(String.format("%.2f",print + wa) +"\n");
-	    }
-	    ou.flush();
-  }
+		int x = sc.nextInt();
+		double wa = 0;
+		if (x % 5 == 0) {
+			wa = x / 1.00 + 0.50;
+		}
+		double print = sc.nextDouble() - wa;
+		if (print >= 0) {
+			ou.write(String.format("%.2f", print) + "\n");
+		} else {
+			ou.write(String.format("%.2f", print + wa) + "\n");
+		}
+		ou.flush();
+	}
 }

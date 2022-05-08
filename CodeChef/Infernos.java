@@ -7,7 +7,7 @@ import java.io.*;
 import java.util.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Infernos {
 	static class FastReader {
 		BufferedReader br;
 		StringTokenizer st;
@@ -57,31 +57,31 @@ public class Main {
 		// Start coding
 		int t = sc.nextInt();
 		for (int o = 0; o < t; o++) {
-	        int n = sc.nextInt();
-	        int x = sc.nextInt();
-	        int a[]=new int[n];
-	        int max=1;
-	        for(int i=0;i<n;i++) {
-	        	a[i]=sc.nextInt();
-	        	if(a[i]>max)
-	        		max=a[i];
-	        }
-	        int c=0;
-        	for(int i=0;i<n;i++) {
-        		if(a[i]%x==0) {
-        			c=c+(a[i]/x);
-        		}else {
-        			c=c+(a[i]/x)+1;
-        		}
-        	}
-	        if(max>c) {
-	        	
-	        	ou.write(c +"\n");
-	        }else {
-	        	ou.write(max +"\n");;
-	        }
+			int n = sc.nextInt();
+			int x = sc.nextInt();
+			int a[] = new int[n];
+			int max = 1;
+			for (int i = 0; i < n; i++) {
+				a[i] = sc.nextInt();
+				if (a[i] > max)
+					max = a[i];
+			}
+			int c = 0;
+			for (int i = 0; i < n; i++) {
+				if (a[i] % x == 0) {
+					c = c + (a[i] / x);
+				} else {
+					c = c + (a[i] / x) + 1;
+				}
+			}
+			if (max > c) {
+
+				ou.write(c + "\n");
+			} else {
+				ou.write(max + "\n");
+				;
+			}
 		}
 		ou.flush();
 	}
 }
-
