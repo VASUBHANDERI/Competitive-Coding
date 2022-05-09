@@ -1,10 +1,10 @@
-# Day 5
+# Day 6
 
-## Number of Problems solved: 2
+## Number of Problems solved: 1
 
 ### Problem 1
 
-#### [Game of Pooks](https://www.codechef.com/problems/POOK)
+#### [Programming Languages](https://www.codechef.com/problems/PROGLANG)
 
 #### Solution:
 
@@ -18,7 +18,7 @@ import java.io.*;
 import java.util.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Programming_Languages {
     static class FastReader {
         BufferedReader br;
         StringTokenizer st;
@@ -65,22 +65,29 @@ public class Main {
         // TODO Auto-generated method stub
         FastReader sc = new FastReader();
         BufferedWriter ou = new BufferedWriter(new OutputStreamWriter(System.out));
-        // Start coding
+
         int t = sc.nextInt();
-        for (int o = 0; o < t; o++) {
-            int n = sc.nextInt();
-            if (n == 1) {
-                ou.write(1 + "\n");
-            } else if (n < 4) {
-                ou.write(n - 1 + "\n");
-            } else {
-                ou.write(n + "\n");
+        for (int h = 0; h < t; h++) {
+            int A=sc.nextInt();
+            int B=sc.nextInt();
+            int A1 = sc.nextInt();
+            int B1 = sc.nextInt();
+            int A2 = sc.nextInt();
+            int B2 = sc.nextInt();
+            if((A1==A||A1==B) && (B1==A || B1==B)) {
+            	ou.write(1 +"\n");
+            }
+            else if((A2==A||A2==B) && (B2==A || B2==B)) {
+            	ou.write(2 +"\n");
+            }else {
+            	ou.write(0 +"\n");
             }
 
         }
         ou.flush();
     }
 }
+
 
 ```
 
