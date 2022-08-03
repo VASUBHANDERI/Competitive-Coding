@@ -1,9 +1,5 @@
 # Competitive-Coding
 
-## 100 Days Codding Challenge
-
-- I'll try to maintain my coding streak as much as possible, and I'll keep track of every problem I answer, including the problem statement and solution code, for future reference.
-
 ### About_Me
 
 ---
