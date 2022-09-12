@@ -11,7 +11,7 @@ Currently persuing _CSE (B.Tech.)_ from _Indian Institute of Information Technol
 ### Competitive Programming Profile Links:
 
 - [Codeforeces Profile](https://codeforces.com/profile/Vasu1211 "Vasu1211")
-- [Codechef Profile](https://www.codechef.com/users/vasu002 "vasu002")
+- [Codechef Profile](https://www.codechef.com/users/vasu1211 "vasu1211")
 
 ### Personal Links:
 

@@ -1,5 +1,3 @@
-// TLE
-
 #include <algorithm>
 #include <iostream>
 #include <set>
@@ -53,7 +51,7 @@ signed main()
         for (int i = 1; i < n; i++)
         {
             bool increment = true;
-            for (int j = 0; j < i;j++)
+            for (int j = 0; j < i; j++)
             {
                 if (ar[j] > ar[i])
                 {
