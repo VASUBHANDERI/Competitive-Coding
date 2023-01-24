@@ -25,7 +25,7 @@ public:
             for (int i = 0; i < nums.size(); i++)
             {
                 sum += nums[i];
-                if (sum < 0 && nums.size() > 1)
+                if (sum < 0)
                 {
                     sum = 0;
                 }
