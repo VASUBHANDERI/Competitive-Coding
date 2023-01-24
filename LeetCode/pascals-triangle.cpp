@@ -6,11 +6,8 @@
 
 // @lc code=start
 
-
 #include <bits/stdc++.h>
 using namespace std;
-
-
 
 class Solution
 {
@@ -49,4 +46,3 @@ public:
     }
 };
 // @lc code=end
-
