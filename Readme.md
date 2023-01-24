@@ -12,6 +12,7 @@ Currently persuing _CSE (B.Tech.)_ from _Indian Institute of Information Technol
 
 - [Codeforeces Profile](https://codeforces.com/profile/Vasu1211 "Vasu1211")
 - [Codechef Profile](https://www.codechef.com/users/vasu1211 "vasu1211")
+- [LeetCode Profile](https://leetcode.com/vbbhanderi7577/ "Vasu")
 
 ### Personal Links:
 
