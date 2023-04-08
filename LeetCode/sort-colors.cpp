@@ -13,18 +13,31 @@ class Solution
 public:
     void sortColors(vector<int> &nums)
     {
-        multiset<int> s;
+        int zero = 0;
+        int one = 0;
+
         for (int i = 0; i < nums.size(); i++)
         {
-            s.insert(nums[i]);
-        }
-        vector<int> ans;
+            if (nums[i] == 1)
+            {
+                one++;
+            }
+            else if (nums[i] == 0)
+            {
+                zero++;
+            }
 
-        for (auto it : s)
-        {
-            ans.push_back(it);
+            nums[i] = 2;
         }
-        nums = ans;
+
+        for (int i = 0; i < zero; i++)
+        {
+            nums[i] = 0;
+        }
+        for (int i = zero; i < zero + one; i++)
+        {
+            nums[i] = 1;
+        }
     }
 };
 // @lc code=end
