@@ -10,18 +10,43 @@ class Solution
 public:
     vector<int> twoSum(vector<int> &nums, int target)
     {
-        vector<int> ans;
-        for (int i = 0; i < nums.size() - 1; i++)
-        {
+        // #######################
+        // Brute Force Approach
+        // #######################
+        //  vector<int> ans;
+        //  for (int i = 0; i < nums.size() - 1; i++)
+        //  {
 
-            for (int j = i + 1; j < nums.size(); j++)
+        //     for (int j = i + 1; j < nums.size(); j++)
+        //     {
+        //         if ((nums[i] + nums[j]) == target)
+        //         {
+        //             ans.push_back(i);
+        //             ans.push_back(j);
+        //             break;
+        //         }
+        //     }
+        // }
+        // return ans;
+
+        // #######################
+        // Optimal Approach
+        // #######################
+        vector<int> ans;
+        map<int, int> mpp;
+        for (int i = 0; i < nums.size(); i++)
+        {
+            int current = nums[i];
+            int more = target - current;
+            if (mpp.find(more) != mpp.end())
             {
-                if ((nums[i] + nums[j]) == target)
-                {
-                    ans.push_back(i);
-                    ans.push_back(j);
-                    break;
-                }
+                ans.push_back(i);
+                ans.push_back(mpp[more]);
+                return ans;
+            }
+            else
+            {
+                mpp[current] = i;
             }
         }
         return ans;

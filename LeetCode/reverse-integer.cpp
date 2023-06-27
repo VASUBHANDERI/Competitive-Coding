@@ -11,21 +11,56 @@ using namespace std;
 class Solution
 {
 public:
-    int reverse(int x)
+    // #############
+    // Brute Force
+    // #############
+    // int reverse(int x)
+    // {
+    //     int max = INT32_MAX;
+    //     int min = INT32_MIN;
+    //     long long ans;
+    //     string str = to_string(x);
+    //     std::reverse(str.begin(), str.end());
+    //     if (x > 0)
+    //         ans = stol(str);
+    //     else
+    //         ans = stol(str) * -1;
+
+    //     if (ans > max || ans < min)
+    //         ans = 0;
+
+    //     return ans;
+    // }
+
+    // ################
+    // Better
+    // ################
+
+    int reverse(long long x)
     {
-        int max = INT32_MAX;
-        int min = INT32_MIN;
-        long long ans;
-        string str = to_string(x);
-        std::reverse(str.begin(), str.end());
-        if (x > 0)
-            ans = stol(str);
-        else
-            ans = stol(str) * -1;
+        long long ans = 0;
+        bool neg = false;
+        if (x < 0)
+        {
+            x = -1 * x;
+            neg = true;
+        }
 
-        if (ans > max || ans < min)
-            ans = 0;
+        while (x > 0)
+        {
+            int d = x % 10;
+            ans = (ans * 10) + d;
+            if (ans > INT32_MAX)
+            {
+                return 0;
+            }
+            x = x / 10;
+        }
 
+        if (neg)
+        {
+            return ans * -1;
+        }
         return ans;
     }
 };
