@@ -8,25 +8,33 @@
 class Solution
 {
 public:
+    void reverse(vector<int> &nums, int i, int j)
+    {
+        while (i < j)
+        {
+            int temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+            i++;
+            j--;
+        }
+    }
     void rotate(vector<int> &nums, int k)
     {
-        vector<int> temp;
+
         int n = nums.size();
         k = k % n;
-        for (int i = 0; i < n - k; i++)
-        {
-            temp.push_back(nums[i]);
-        }
+        // reversing first n-k elements
 
-        for (int i = 0; i + n - k < n; i++)
-        {
-            nums[i] = nums[i + n - k];
-        }
+        reverse(nums, 0, n - k - 1);
 
-        for (int i = 0; i < n - k; i++)
-        {
-            nums[i + k] = temp[i];
-        }
+        // reversing last k elements
+
+        reverse(nums, n - k, n - 1);
+
+        // reversing resultant array
+
+        reverse(nums, 0, n - 1);
     }
 };
 // @lc code=end

@@ -10,7 +10,7 @@ class Solution
 public:
     bool check(vector<int> &nums)
     {
-        vector<int> temp;
+        bool sorted = true;
         int n = nums.size();
         int minElement = *min_element(nums.begin(), nums.end());
         int minIndex = n - 1;
@@ -30,35 +30,33 @@ public:
             }
         }
 
-        for (int i = 0; i < minIndex; i++)
-        {
-            temp.push_back(nums[i]);
-        }
+        cout << "minIndex: " << minIndex << endl;
 
-        int curIndex = 0;
-        for (int i = 0; i + minIndex < n; i++)
+        for (int i = minIndex; i < n - 1; i++)
         {
-            nums[i] = nums[i + minIndex];
-            curIndex++;
-        }
-        for (int i = 0; i + curIndex < n; i++)
-        {
-            nums[i + curIndex] = temp[i];
-        }
-
-        for (auto it : nums)
-        {
-            cout << it << " ";
-        }
-
-        for (int i = 0; i < n - 1; i++)
-        {
-            if (nums[i + 1] < nums[i])
+            if (nums[i] > nums[i + 1])
             {
+                cout << "check 1 failed" << endl;
                 return false;
             }
         }
-        return true;
+
+        for (int i = 0; i < minIndex - 1; i++)
+        {
+            if (nums[i] > nums[i + 1])
+            {
+                cout << "check 2 failed" << endl;
+                return false;
+            }
+        }
+
+        if ((minIndex != 0) && (nums[n - 1] > nums[0]))
+        {
+            cout << "Check 3 failed!" << endl;
+            return false;
+        }
+
+        return sorted;
     }
 };
 // @lc code=end
